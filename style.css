@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .calculator {
+    width: 300px;
+    height: auto;
+    background-color:#222;
+    border-radius: 10px;
+    margin: 100px auto;
+  }
+  
+  .display {
+    width: calc(100% - 10px);
+    height: 60px;
+    background-color: #ddd;
+    border-radius: 8px;
+    margin: 5px;
+    text-align: right;
+    border: none;
+    outline: none;
+    padding-right: 10px;
+    font-size: 20px;
+    color: black;
+    font-weight: bolder;
+  }
+  
+  .button {
+    width: calc(100% / 4 - 9px);
+    height: 35px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 35px;
+    text-align: center;
+    border: none;
+    background-color: rgb(243, 243, 243);
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: rgba(243, 243, 243, 0.425);
+    color: white;
+  }
+  
+  input[type="button"]:nth-last-of-type(1) {
+    background-color: green;
+    color: white;
+    width: calc(50% - 2.5%);
+  }
+  
+  input[type="button"]:nth-last-of-type(1):hover {
+    background-color: rgba(0, 128, 0, 0.61);
+  }
+  .btn-del {
+    background-color: red; 
+    color: white;
+  }
+  .btn-del:hover {
+    background-color: rgba(255, 0, 0, 0.733);
+  }
+  
+  @media screen and (max-width: 768px) {
+    .calculator {
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+        margin: 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column;
+    }
+  
+    .display {
+        width: 100%;
+        height: 15%;
+        margin: 0;
+        margin-top: 20%;
+        font-size: 10vw;
+    }
+  
+    .btns {
+        width: 100%;
+        height: 70%;
+    }
+  
+    .button {
+        margin-top: 3%;
+        height: 17%;
+        margin-bottom: 0;
+    }
+  }

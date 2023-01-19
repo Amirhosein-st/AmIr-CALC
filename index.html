@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Amir Calculator</title>
+    <link rel="icon" href="./assets/icon-192.png">
+    <link rel="manifest" href="./manifest.json">
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js');
+            });
+        }
+    </script>
+</head>
+
+<body>
+
+    <form class="calculator" name="calculator" action="">
+
+        <input class="display" type="text" value="" name="display">
+
+        <div class="btns">
+            <input class="button btn-del" type="button" value="DEL" onclick="del()">
+            <input class="button" type="button" value="C" onclick="c()">
+            <input class="button" type="button" value="%" onclick="data(this.value)">
+            <input class="button" type="button" value="-" onclick="data(this.value)">
+            <input class="button" type="button" value="9" onclick="data(this.value)">
+            <input class="button" type="button" value="8" onclick="data(this.value)">
+            <input class="button" type="button" value="7" onclick="data(this.value)">
+            <input class="button" type="button" value="*" onclick="data(this.value)">
+            <input class="button" type="button" value="6" onclick="data(this.value)">
+            <input class="button" type="button" value="5" onclick="data(this.value)">
+            <input class="button" type="button" value="4" onclick="data(this.value)">
+            <input class="button" type="button" value="/" onclick="data(this.value)">
+            <input class="button" type="button" value="3" onclick="data(this.value)">
+            <input class="button" type="button" value="2" onclick="data(this.value)">
+            <input class="button" type="button" value="1" onclick="data(this.value)">
+            <input class="button" type="button" value="+" onclick="data(this.value)">
+            <input class="button" type="button" value="0" onclick="data(this.value)">
+            <input class="button" type="button" value="." onclick="data(this.value)">
+            <input class="button" type="button" value="=" onclick="equal()">
+            <div style="clear: both;"></div>
+        </div>
+
+    </form>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
